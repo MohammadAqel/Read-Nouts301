@@ -2,12 +2,12 @@
 
 |  Tables   |      Are      |
 
-|  class01  | [link]() |
+|  read01  | [link]() |
 
-|  class02  | [link]() |
+|  read02  | [link]() |
 
-|  class03  | [link]() |
+|  read03  | [link]() |
 
-|  class04  | [link]() |
+|  read04  | [link]() |
 
-|  class05  | [link]() |
+|  read05  | [link]() |
