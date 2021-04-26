@@ -1,170 +1,61 @@
-# Responsive Web Design
+React
+What is React?
 
-Responsive web design is the practice of building a website suitable to work on every device and every screen size, no matter how large or small, mobile or desktop. Responsive web design is focused around providing an intuitive and gratifying experience for everyone. Desktop computer and cell phone users alike all benefit from responsive websites.
+React is a JavaScript library for building user interfaces.
 
-## Responsive web design is broken down into three main components
+React is used to build single page applications.
 
-1. **flexible layouts**
+React allows us to create reusable UI components.
 
-The formula is based around taking the target width of an element and dividing it by the width of it’s parent element. The result is the relative width of the target element.
+How does React Work?
 
-`target ÷ context = result`
+React creates a VIRTUAL DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
 
-```css
-.container {
-  width: 538px;
-}
-section,
-aside {
-  margin: 1.858736059%; /*  10px ÷ 538px = .018587361 */
-}
-section {
-  float: left;
-  width: 63.197026%;    /* 340px ÷ 538px = .63197026 */   
-}
-aside {
-  float: right;
-  width: 29.3680297%;  /* 158px ÷ 538px = .293680297 */
-}
-```
+React finds out what changes have been made, and changes only what needs to be changed.
 
+React JSX (Links to an external site.)
+What is JSX?
 
-2. **Media Queries**
+JSX stands for JavaScript XML.
 
-Media queries provide the ability to specify different styles for individual browser and device circumstances, the width of the viewport or device orientation.
+JSX allows us to write HTML in React.
 
-***Initializing Media Queries***
+JSX makes it easier to write and add HTML in React.
 
-using the @media rule inside of an existing style sheet, importing a new style sheet using the @import rule.
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() or appendChild() methods.
 
-```css
+JSX converts HTML tags into react elements.
 
-/* @media Rule */
-@media all and (max-width: 1024px) {...}
+Rendering Elements (Links to an external site.)
+React renders HTML to the web page by using a function called ReactDOM.render().
 
-/* @import Rule */
-@import url(styles.css) all and (max-width: 1024px) {...}
+The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
 
-````
+The purpose of the function is to display the specified HTML code inside the specified HTML element.
 
- or by linking to a separate style sheet from within the HTML document.
+React Components (Links to an external site.)
+All React components must act like pure functions with respect to their props.
 
-````html
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
 
-<!-- Separate CSS File -->
-<link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)">
+When creating a React component, the component’s name must start with an upper case letter.
 
-``````
+Components come in two types, Class components and Function components.
 
-There are three different logical operators available for use within media queries
+Class components
+It requires you to extend from React.Component and create a render function which returns a React element.
 
-* and : allows an extra condition to be added
+Function components
+It is a plain JavaScript function which accepts props as an argument and returns a React element.
 
-```css
-@media all and (min-width: 800px) and (max-width: 1024px) {...}
-```
+React Props (Links to an external site.)
+Props are arguments passed into React components.
 
-* not : specifying any query but the one identified
+Props are passed to components via HTML attributes.
 
-```css
-@media not screen and (color) {...}
-```
-
-* only: hiding the styles from devices or browsers that don’t support media queries
-
-```css
-@media only screen and (orientation: portrait) {...}
-```
-
-**Media Features**
-
-* Height & Width
-* Orientation :determines if a device is in the landscape or portrait orientation.
-
-  3. **Flexible Media**
-
-One quick way to make media scalable is by using the max-width property with a value of 100%. Doing so ensures that as the viewport gets smaller any media will scale down according to its containers width.
-
-be carfare about these things:
-
-* parent element needs to have a width of 100%
-* parent element also needs to have a height of 0
-* Padding-bottom of the parent element, the value of which is set in the same aspect ratio of the video the code
-
-```css
-img, video, canvas {
-  max-width: 100%;
-}
-`````
-
-HTML
-
-```html
-<figure>
-  <iframe src="https://www.youtube.com/embed/4Fqg43ozz7A"></iframe>
-</figure>
-`````
-
-CSS
-
-```css
-figure {
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 */
-  position: relative;
-  width: 100%;
-}
-iframe {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-`````
-
--------------------------------
-
-# All About Floats
-
-Float is a CSS positioning property
-
-There are four valid values for the float property:
-
-* Left and Right float elements those directions respectively.
-* None (the default) ensures the element will not float
-* Inherit which will assume the float value from that elements parent element.
-
-**Clearing the Float**
-
-Float’s sister property is clear. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float.
-
-```css
-#footer {
-  clear: both;   
-}
-````
-
-**Techniques for Clearing Floats**
-
-1. The Empty Div Method is, quite literally, an empty div.
-
- `<div style="clear: both;"></div>`
-
-2.  The Overflow Method
-
- relies on setting the overflow CSS property on a parent element. If this property is set to auto or hidden on the parent element, the parent will expand to contain the floats, effectively clearing it for succeeding elements.
-
- 3. The Easy Clearing Method
-
-  uses a clever CSS pseudo selector (:after) to clear floats. Rather than setting the overflow on the parent.
-
-  ```css
-  .clearfix:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
-} 
-````
+JSX (Links to an external site.)
+It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. (Links to an external site.)
+React embraces the fact that rendering logic is inherently coupled with other UI logic: (Links to an external site.)
+1. how events are handled.
+2. how the state changes over time.
+3. how the data is prepared for display.
