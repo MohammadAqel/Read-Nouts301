@@ -19,11 +19,3 @@ Handling events with React elements is very similar to handling events on DOM el
 React events are named using camelCase, rather than lowercase. With JSX you pass a function as the event handler, rather than a string
 When using React, you generally don’t need to call addEventListener to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered. When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. For example, this Toggle component renders a button that lets the user toggle between “ON” and “OFF” states.
 
-1. What went well, that I might forget if I don’t write down?
-So far so good.
-2. What did I learn today?
-I learned about React and how to create an app using react. also, I learned about different web coding references such as single-page App, arrow functions, and Classes. 
-3. What should I do differently next time?
-I think I have to pay attention to details more next time.
-4. What still puzzles me, or what do I need to learn more about?
-I need to learn more about dealing with react or it's hard for me cuz it's the first time to deal with it!
