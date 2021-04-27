@@ -1,13 +1,19 @@
-Forms
-HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:
 
-<form>
-  <label>
-    Name:
-    <input type="text" name="name" />
-  </label>
-  <input type="submit" value="Submit" />
-</form>
+Forms
+HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name: (Links to an external site.)
+Controlled Components: (Links to an external site.)
+In HTML, form elements such as (input), (textarea), and  typically maintain their own state and update it based on user input. In React, mutable state is typically kept in the state property of components, and only updated with setState(). (Links to an external site.)
+We can combine the two by making the React state be the “single source of truth”. Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”. (Links to an external site.)
+The textarea Tag: (Links to an external site.)
+In React, a  (Links to an external site.)
+Notice that this.state.value is initialized in the constructor, so that the text area starts off with some text in it. (Links to an external site.)
+The select Tag: (Links to an external site.)
+Note that the Coconut option is initially selected, because of the selected attribute. React, instead of using this selected attribute, uses a value attribute on the root select tag. This is more convenient in a controlled component because you only need to update it in one place. (Links to an external site.)
+Overall, this makes it so that (input type=”text”), (textarea), and (select) all work very similarly - they all accept a value attribute that you can use to implement a controlled component. (Links to an external site.)
+The file input Tag: (Links to an external site.)
+In HTML, an (input type=”file”) lets the user choose one or more files from their device storage to be uploaded to a server or manipulated by JavaScript via the File API. (Links to an external site.)
+Because its value is read-only, it is an uncontrolled component in React. It is discussed together with other uncontrolled components later in the documentation.
+
 This form has the default HTML form behavior of browsing to a new page when the user submits the form. If you want this behavior in React, it just works. But in most cases, it’s convenient to have a JavaScript function that handles the submission of the form and has access to the data that the user entered into the form. The standard way to achieve this is with a technique called “controlled components”.
 
 Controlled Components
