@@ -11,3 +11,5 @@
 |  read04  | [link](https://mohammadaqel.github.io/Read-Nouts301/read04) |
 
 |  read05  | [link](https://mohammadaqel.github.io/Read-Nouts301/read05) |
+
+|  read06  | [link](https://mohammadaqel.github.io/Read-Nouts301/read06) |
